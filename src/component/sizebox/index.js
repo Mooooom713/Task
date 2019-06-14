@@ -31,7 +31,7 @@ class SizeBox extends Component {
         )
     }
 
-    chooseSize (ev) {
+    chooseSize(ev) {
         var target = ev.target || ev.srcElement;
         if (target.nodeName.toLowerCase() === 'li') {
             this.setState({
@@ -40,11 +40,11 @@ class SizeBox extends Component {
         }
     }
 
-    addToCart (){
+    addToCart() {
         var sText = this.state.size;
-        if(sText) {
+        if (sText) {
             const goodsArr = localStorage.getItem('goodsArr') ? JSON.parse(localStorage.getItem('goodsArr')) : [];
-            const countArr = localStorage.getItem('countArr') ? JSON.parse(localStorage.getItem('countArr')) : {s: 0, m: 0, l: 0};
+            const countArr = localStorage.getItem('countArr') ? JSON.parse(localStorage.getItem('countArr')) : { s: 0, m: 0, l: 0 };
             goodsArr.push({
                 name: 'Classic Tee',
                 prize: 75,
@@ -78,13 +78,13 @@ class SizeBox extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setCount(){
+        setCount() {
             const action = {
                 type: ADD_GOODS
             };
             dispatch(action);
         },
-        setSizeCount(stype){
+        setSizeCount(stype) {
             const action = {
                 type: stype
             };
