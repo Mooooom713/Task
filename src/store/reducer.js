@@ -3,10 +3,9 @@ import * as ActionTypes from './actionType';
 const defaultState = {
   count: localStorage.goodsArr &&  JSON.parse(localStorage.goodsArr).length ? JSON.parse(localStorage.goodsArr).length : 0,
   isClick: false,
-  sCount: 0,
-  mCount: 0,
-  lCount: 0
+  sizeCount: localStorage.getItem('countArr') ? JSON.parse(localStorage.getItem('countArr')) : [{s: 0, m: 0, l: 0}]
 }
+
 
 export default (state = defaultState, action) => {
   if(action.type === ActionTypes.ADD_GOODS){
