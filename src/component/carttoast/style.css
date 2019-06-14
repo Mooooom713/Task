@@ -1,0 +1,59 @@
+.toastActive{
+  display: none;
+}
+
+.toastWrap{
+  width: 18rem;
+  position: absolute;
+  right: 0;
+  background: #ffffff;
+  margin-right: 10%;
+}
+
+.toastWrap > ul{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toastWrap > ul li{
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  margin-top: 1rem;
+  width: 16rem;
+  display: flex;
+  flex-direction: row;
+  height: 7rem;
+  border: 0;
+}
+
+.toastWrap > ul li div{
+  flex: 4;
+  height: 100%;
+}
+
+.toastWrap > ul li div p{
+  margin: 0;
+  text-align: left;
+  color: #222222;
+  line-height: 1rem;
+  padding-left: 1rem;
+  font-size: .9rem;
+}
+
+.toastWrap > ul li div p:nth-child(2),.toastWrap > ul li div p:nth-child(3){
+  margin-top: .8rem;
+}
+
+.toastWrap > ul li div p > span{
+  font-weight: 600;
+}
+
+.toastWrap > ul img{
+  flex: 2;
+  height: 100%;
+}
