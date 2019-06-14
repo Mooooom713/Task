@@ -4,19 +4,23 @@ import Header from './component/header';
 import ImageBox from './component/imagebox';
 import Description from './component/description/index'
 import SizeBox from './component/sizebox/index'
+import { Provider } from 'react-redux';
+import store from './store';
 
 function App() {
   return (
-    <div className="App">
-      <Header count="4"/>
-      <div className="sectionWrap">
-        <ImageBox/>
-        <div className="rightSide">
-        <Description />
-        <SizeBox />
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <div className="sectionWrap">
+          <ImageBox />
+          <div className="rightSide">
+          <Description />
+          <SizeBox />
+          </div>
         </div>
       </div>
-    </div>
+    </Provider>
   );
 }
 

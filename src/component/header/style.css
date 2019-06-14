@@ -22,31 +22,32 @@
   border: 0;
   background-color: transparent;
   color: #888888;
+  padding-left: .6rem;
+  padding-right: .6rem;
+  outline: none;
+}
+
+.header .button-wrap > button.active{
+  background: #ffffff;
+  border-top: 1px solid #CCCCCC;
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
 }
 
 /** 适配768 **/
 
 @media (max-width: 768px){
   .header{
+    margin-top: 4%;
+  }
+  
+  .header .button-wrap{
     width: 100%;
-    height: 2rem;
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
   }
 }
 
 
 /** 适配414 **/
-@media (min-width: 414px){
-  .header{
-    margin-top: 4%;
-  }
-
-  .header .button-wrap{
-    width: 100%;
-  }
-}
 
 @media (max-width: 414px){
   .header{
