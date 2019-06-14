@@ -2,6 +2,7 @@
     font-size: 0.8rem;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 2rem;
 }
 
 .mark {
@@ -22,6 +23,11 @@ li {
     cursor: pointer;
 }
 
+li.active{
+    border: 2px solid #222222;
+    color: #222222;
+}
+
 button {
     cursor: pointer;
     border: 2px solid #222222;
@@ -29,7 +35,9 @@ button {
     padding: 10px 20px;
     width: 160px;
     transition: background-color .2s;
+    outline: none;
 }
+
 
 button:hover {
     background: #000000;

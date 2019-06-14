@@ -7,7 +7,12 @@ class SizeBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            size: ''
+            size: '',
+            sizsStyle: {
+                S: '',
+                M: '',
+                L: ''
+            }
         };
     }
 
@@ -20,9 +25,9 @@ class SizeBox extends Component {
                 <ul onClick={(e) => {
                     this.chooseSize(e);
                 }}>
-                    <li className="firstLi">S</li>
-                    <li>M</li>
-                    <li>L</li>
+                    <li className={`firstLi ${this.state.sizsStyle.S}`}>S</li>
+                    <li className={this.state.sizsStyle.M}>M</li>
+                    <li className={this.state.sizsStyle.L}>L</li>
                 </ul>
                 <button onClick={() => {
                     this.addToCart();
@@ -35,7 +40,12 @@ class SizeBox extends Component {
         var target = ev.target || ev.srcElement;
         if (target.nodeName.toLowerCase() === 'li') {
             this.setState({
-                size: target.innerHTML
+                size: target.innerHTML,
+                sizsStyle: {
+                    S: target.innerHTML === 'S'? 'active' : '',
+                    M: target.innerHTML === 'M'? 'active' : '',
+                    L: target.innerHTML === 'L'? 'active' : ''
+                }
             })
         }
     }
@@ -65,12 +75,19 @@ class SizeBox extends Component {
                     type = ADD_L_SIZE;
                     countArr.l++;
                     break;
+                default:
+                    break;
             }
             localStorage.setItem('countArr', JSON.stringify(countArr));
             this.props.setCount();
             this.props.setSizeCount(type);
             this.setState({
-                size: ''
+                size: '',
+                sizsStyle: {
+                    S: '',
+                    M: '',
+                    L: ''
+                }
             });
         }
     }
