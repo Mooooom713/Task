@@ -1,0 +1,22 @@
+.sectionWrap{
+  display: flex;
+  flex-direction: row;
+}
+
+/** 适配768 **/
+
+@media (max-width: 768px){
+  .sectionWrap{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/** 适配414 **/
+@media (max-width: 414px){
+  .sectionWrap{
+    display: flex;
+    flex-direction: column;
+  }
+}
