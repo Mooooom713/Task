@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <header className="App-header">
         <button>My Cart({})</button>
       </header>
@@ -28,6 +28,9 @@ function App() {
           <li>L</li>
         </ul>
       </section>
+=======
+      
+>>>>>>> 42f451d68c72e381d75719f75a1fb7e0ffa2655f
     </div>
   );
 }
