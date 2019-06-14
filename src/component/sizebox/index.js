@@ -44,6 +44,7 @@ class SizeBox extends Component {
         var sText = this.state.size;
         if(sText) {
             const goodsArr = localStorage.getItem('goodsArr') ? JSON.parse(localStorage.getItem('goodsArr')) : [];
+            const countArr = JSON.parse(localStorage.getItem('countArr'));
             goodsArr.push({
                 name: 'Classic Tee',
                 prize: 75,
@@ -54,14 +55,18 @@ class SizeBox extends Component {
             switch (this.state.size) {
                 case 'S':
                     type = ADD_S_SIZE;
+                    countArr.s++;
                     break;
                 case 'M':
                     type = ADD_M_SIZE;
+                    countArr.m++;
                     break;
                 case 'L':
                     type = ADD_L_SIZE;
+                    countArr.l++;
                     break;
             }
+            localStorage.setItem('countArr', JSON.stringify(countArr));
             this.props.setCount();
             this.props.setSizeCount(type);
             this.setState({
