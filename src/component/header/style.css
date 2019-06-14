@@ -33,6 +33,8 @@
   border-left: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   color: #222222;
+  border-bottom-color: transparent;
+  z-index: 1;
 }
 
 /** 适配768 **/

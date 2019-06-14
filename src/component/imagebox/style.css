@@ -2,9 +2,10 @@
   flex:1;
   display: flex;
   height: 36rem;
-  margin-top: 2%;
   justify-content: flex-end;
   margin-right: 6%;
+  margin: 0 auto;
+  margin-top: 2%;
 }
 
 .imagebox > div{

@@ -20,7 +20,7 @@ class SizeBox extends Component {
                 <ul onClick={(e) => {
                     this.chooseSize(e);
                 }}>
-                    <li>S</li>
+                    <li className="firstLi">S</li>
                     <li>M</li>
                     <li>L</li>
                 </ul>

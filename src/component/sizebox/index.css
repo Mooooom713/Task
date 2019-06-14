@@ -1,5 +1,7 @@
 .SizeBox {
     font-size: 0.8rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .mark {
@@ -24,6 +26,12 @@ button {
     border: 2px solid #222222;
     background: #FFFFFF;
     padding: 10px 20px;
+    width: 160px;
+}
+
+button:hover {
+    background: #000000;
+    color: #FFFFFF;
 }
 
 p {
@@ -41,4 +49,8 @@ ul {
 
 .sizeName::before {
     content: " ";
+}
+
+.firstLi {
+    margin-left: 0px;
 }
