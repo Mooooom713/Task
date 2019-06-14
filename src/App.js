@@ -9,7 +9,7 @@ function App() {
       </header>
       <section>
         <div>
-          <img src='./asset/classic-tee.jpg' alt='Cloth'/>
+          <img src={require('./asset/classic-tee.jpg')} alt='Cloth'/>
         </div>
       </section>
       <section>
