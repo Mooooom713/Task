@@ -7,7 +7,8 @@
   position: absolute;
   right: 0;
   background: #ffffff;
-  margin-right: 10%;
+  margin-right: 12.4%;
+  border: 1px solid #CCCCCC;
 }
 
 .toastWrap > ul{
@@ -56,4 +57,21 @@
 .toastWrap > ul img{
   flex: 2;
   height: 100%;
+}
+
+/** 适配768 **/
+
+@media (max-width: 768px){
+  .toastWrap{
+    margin-right: 10%;
+  }
+}
+
+
+/** 适配414 **/
+
+@media (max-width: 414px){
+  .toastWrap{
+    margin-right: 10%;
+  }
 }

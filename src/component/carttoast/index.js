@@ -16,7 +16,7 @@ const aList = (count, size) => {
 
 const CartToast = (props) => {
   const { isClick, sCount, mCount, lCount } = useSelector(state => state);
-  const styleName = isClick ? ' toastActive' : '';
+  const styleName = isClick ? '' : ' toastActive';
   const sListContent = aList(sCount, 'S');
   const mListContent = aList(mCount, 'M');
   const lListContent = aList(lCount, 'L');
