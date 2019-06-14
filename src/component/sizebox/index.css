@@ -1,3 +1,7 @@
+.SizeBox {
+    font-size: 0.8rem;
+}
+
 .mark {
     color: #C90000;
     font-weight: bold;
@@ -24,4 +28,17 @@ button {
 
 p {
     color: #888888;
+}
+
+ul {
+    padding: 0px;
+}
+
+.sizeName {
+    font-weight: bold;
+    color: #000000;
+}
+
+.sizeName::before {
+    content: " ";
 }
