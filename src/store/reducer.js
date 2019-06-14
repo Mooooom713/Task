@@ -1,8 +1,11 @@
 import * as ActionTypes from './actionType';
 
 const defaultState = {
-  count: localStorage.goodsArr ? localStorage.goodsArr.length : 0,
-  isClick: false
+  count: localStorage.goodsArr &&  localStorage.goodsArr.length ? localStorage.goodsArr.length : 0,
+  isClick: false,
+  sCount: 0,
+  mCount: 0,
+  lCount: 0
 }
 
 export default (state = defaultState, action) => {
