@@ -21,5 +21,23 @@ export default (state = defaultState, action) => {
     return newState;
   }
 
+  if(action.type === ActionTypes.ADD_S_SIZE){
+    const newState = Object.assign({}, state);
+    newState.sCount++;
+    return newState;
+  }
+
+  if(action.type === ActionTypes.ADD_M_SIZE){
+    const newState = Object.assign({}, state);
+    newState.mCount++;
+    return newState;
+  }
+
+  if(action.type === ActionTypes.ADD_L_SIZE){
+    const newState = Object.assign({}, state);
+    newState.lCount++;
+    return newState;
+  }
+
   return state;
 }
