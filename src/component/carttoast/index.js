@@ -16,10 +16,11 @@ const aList = (count, size) => {
 
 const CartToast = (props) => {
   const { isClick, sizeCount } = useSelector(state => state);
-  const styleName = isClick ? '' : ' toastActive';
-  const sListContent = aList(sizeCount[0].s, 'S');
-  const mListContent = aList(sizeCount[0].m, 'M');
-  const lListContent = aList(sizeCount[0].l, 'L');
+  let styleName = isClick ? '' : ' toastActive';
+  const sListContent = sizeCount.s > 0 ? aList(sizeCount.s, 'S') : null;
+  const mListContent = sizeCount.m > 0 ? aList(sizeCount.m, 'M') : null;
+  const lListContent = sizeCount.l > 0 ? aList(sizeCount.l, 'L') : null;
+  styleName = sListContent || mListContent || lListContent ? styleName : ' toastActive';
   return (<div className={`toastWrap${styleName}`}>
     <ul>
       {

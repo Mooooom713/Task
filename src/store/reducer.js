@@ -3,7 +3,7 @@ import * as ActionTypes from './actionType';
 const defaultState = {
   count: localStorage.goodsArr &&  JSON.parse(localStorage.goodsArr).length ? JSON.parse(localStorage.goodsArr).length : 0,
   isClick: false,
-  sizeCount: localStorage.getItem('countArr') ? JSON.parse(localStorage.getItem('countArr')) : [{s: 0, m: 0, l: 0}]
+  sizeCount: localStorage.countArr ? JSON.parse(localStorage.countArr) : {s: 0, m: 0, l: 0}
 }
 
 
@@ -12,7 +12,6 @@ export default (state = defaultState, action) => {
     const newState = Object.assign({}, state);
     newState.count++;
     return newState;
-    console.log(newState.count);
   }
 
   if(action.type === ActionTypes.CLICK_BUTTON){
@@ -23,19 +22,19 @@ export default (state = defaultState, action) => {
 
   if(action.type === ActionTypes.ADD_S_SIZE){
     const newState = Object.assign({}, state);
-    newState.sCount++;
+    newState.sizeCount.s++;
     return newState;
   }
 
   if(action.type === ActionTypes.ADD_M_SIZE){
     const newState = Object.assign({}, state);
-    newState.mCount++;
+    newState.sizeCount.m++;
     return newState;
   }
 
   if(action.type === ActionTypes.ADD_L_SIZE){
     const newState = Object.assign({}, state);
-    newState.lCount++;
+    newState.sizeCount.l++;
     return newState;
   }
   console.log(state.count);
