@@ -4,7 +4,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
       <header className="App-header">
         <button>My Cart({})</button>
       </header>
@@ -27,10 +26,8 @@ function App() {
           <li>M</li>
           <li>L</li>
         </ul>
+        <button></button>
       </section>
-=======
-      
->>>>>>> 42f451d68c72e381d75719f75a1fb7e0ffa2655f
     </div>
   );
 }
